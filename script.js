@@ -91,14 +91,18 @@ function openCertificate(certType) {
     }
 }
 
+// Close certificate modal
+function closeCertificate() {
+    const modal = document.getElementById('certificateModal');
+    modal.style.display = 'none';
+}
+
 // Close modal functionality
 const modal = document.getElementById('certificateModal');
 const closeBtn = document.querySelector('.close');
 
 if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    closeBtn.addEventListener('click', closeCertificate);
 }
 
 if (modal) {
